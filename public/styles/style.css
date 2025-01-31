@@ -1,3 +1,42 @@
-body {
-     background-color: lavender;
+html{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     background-color: lavender
+
 }
+
+body {
+     text-align: center;
+}
+
+#fname, #lname, #job, #company, #url, #email {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+}
+
+#first-row, #second-row {
+     display: flex;
+     flex-direction: row;
+}
+
+#contact-form {
+     background-color: whitesmoke;
+     max-width: 50%;
+}
+
+#button, #mail-format, #mail-list {
+     display: flex;
+     flex-direction: row;
+     align-items: flex-start;
+}
+
+#message-box {
+     display: flex;
+     flex-direction: row;
+     align-items: flex-start;
+}
+
+
