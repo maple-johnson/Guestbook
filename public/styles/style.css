@@ -11,20 +11,37 @@ body {
      text-align: center;
 }
 
-#fname, #lname, #job, #company, #url, #email {
+#fname, #lname, #job, #company, #url, #email, #message{
      display: flex;
      flex-direction: column;
      align-items: flex-start;
+     margin: 10px 50px 10px 50px;
 }
 
-#first-row, #second-row {
+#first-row, #second-row, #fourth-row {
      display: flex;
      flex-direction: row;
 }
 
+#third-row {
+     margin-top: 10px;
+     margin-bottom: 20px;
+}
+
+#mail-list {
+     margin-top: 20px;
+}
+
+#button {
+     margin-bottom: 10px;
+     background-color: green;
+     color: white;
+     border-radius: 3px;
+     border-color: green;
+}
+
 #contact-form {
      background-color: whitesmoke;
-     max-width: 50%;
 }
 
 #button, #mail-format, #mail-list {
@@ -32,11 +49,3 @@ body {
      flex-direction: row;
      align-items: flex-start;
 }
-
-#message-box {
-     display: flex;
-     flex-direction: row;
-     align-items: flex-start;
-}
-
-
