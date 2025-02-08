@@ -4,20 +4,21 @@
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Guestbook</title>
-          <link rel="stylesheet" href="styles/style.css" >
+          <link rel="stylesheet" href="styles/app-style.css" >
           <!-- Icon -->
            <link rel="icon" href="images/icons8-open-book-48.png">
      </head>
      <body>
 
-          <form>
+          <form action="/submit-guest" method="post">
 
                <!-- Contact Form -->
                <fieldset id="contact-form">
 
                     <h1>Contact Form</h1>
                     
-                    <!-- First Row of inputs-->
+                    <div id="center">
+                         <!-- First Row of inputs-->
                     <div id="first-row">
                          <label id="fname">First Name
                               <input type="text" name="fname">
@@ -49,19 +50,22 @@
 
                     <!-- Third Row -->
                     <div id="third-row">
-                         <label id="meet">How did we meet</label>
-                         <select name="how-met" id="how-met">
-                              <option value="none">Please select</option>
-                              <option value="meetup">Meetup</option>
-                              <option value="job-fair">Job Fair</option>
-                              <option value="school">School</option>
-                              <option value="work">Work</option>
-                         </select>
+                         <label id="meet">How did we meet
+                              <select name="howmet" id="how-met">
+                                   <option value="none">Please select</option>
+                                   <option value="meetup">Meetup</option>
+                                   <option value="job-fair">Job Fair</option>
+                                   <option value="school">School</option>
+                                   <option value="work">Work</option>
+                              </select>
+                         </label>
+                         
 
      
                          <label id="other">Other (please specify)
                               <input type="text" name="other">
                          </label>
+                    </div>
                     </div>
 
                     <!-- Fourth Row -->
@@ -69,12 +73,13 @@
                          <label>Message
                               <textarea id="message" name="message" cols="100" rows="15"></textarea>
                          </label>
+                         
                     </div>
 
                     <!-- Fifth Row -->
                     <div id="mail-list">
                          <label>
-                              <input type="checkbox" name="mail-list">
+                              <input type="checkbox" name="maillist">
                               Please add me to your mailing list
                          </label>
                     </div>

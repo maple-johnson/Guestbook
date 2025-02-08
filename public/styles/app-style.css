@@ -1,9 +1,7 @@
 html{
+     background-color: lavender;
      display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
      justify-content: center;
-     background-color: lavender
 
 }
 
@@ -11,21 +9,22 @@ body {
      text-align: center;
 }
 
-#fname, #lname, #job, #company, #url, #email, #message{
+#center {
      display: flex;
      flex-direction: column;
-     align-items: flex-start;
-     margin: 10px 50px 10px 50px;
+     justify-content: center;
 }
 
-#first-row, #second-row, #fourth-row {
-     display: flex;
-     flex-direction: row;
+#first-row, #second-row, #third-row{
+     display: grid;
+     grid-template-columns: repeat(auto-fill, 200px); /* Used 'auto-fill' to fill the container with the help of: https://stackoverflow.com/questions/43129360/css-grid-wrapping */
+     text-align: left;
+     margin-left: 100px;
+     margin-top: 20px;
 }
 
-#third-row {
-     margin-top: 10px;
-     margin-bottom: 20px;
+#message {
+     margin-top: 20px;
 }
 
 #mail-list {
