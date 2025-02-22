@@ -1,0 +1,17 @@
+html {
+     background-color: lavender;
+}
+
+body {
+     text-align: center;
+     
+}
+
+#button {
+     border-style: solid;
+     border-radius: 5px;
+     background-color: darkgreen;
+     border-color: black;
+     color: white;
+     padding: 5px;
+}

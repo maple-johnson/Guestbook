@@ -3,15 +3,34 @@
      <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Guest List</title>
+          <title>Admin</title>
+          <link rel="stylesheet" href="styles/confirmation-style.css">
+          <!--Stylesheet not connecting-->
      </head>
      <body>
           <h1>Guest List</h1>
 
+          <a id="button" href="/" >Return Home</a>
+
           <ul>
+               <hr>
+
+               <% if (signed.length == 0) { %> 
+                    <p>There are no contacts</p>
+               <% } %>
+
                <% for (let i = 0; i < signed.length; i++) { %>
-                    <li>Name: <%= signed[i].fname %> <%= signed[i].lname %></li>
-                    <li>Job: <%= signed[i].jtitle %></li>
+                    <li><b>Name:</b> <%= signed[i].fname %> <%= signed[i].lname %></li>
+                    <li><b>Job:</b> <%= signed[i].jtitle %></li>
+                    <li><b>Company</b> <%= signed[i].company %></li>
+                    <li><b>LinkedIn:</b> <%= signed[i].linkedin %></li>
+                    <li><b>Email:</b> <%= signed[i].email %></li>
+                    <li><b>How we met:</b> <%= signed[i].howmet %></li>
+                    <li><b>Additional Info:</b> <%= signed[i].other %></li>
+                    <li><b>Message:</b> <%= signed[i].message %></li>
+                    <li><b>Mail-List:</b> <%= signed[i].maillist %></li>
+                    <li><b>Email Format:</b> <%= signed[i].format %></li>
+                    <li><b>Date Submitted:</b> <%= signed[i].dateTime %></li>
                     <hr>
                <% } %>
           </ul>>

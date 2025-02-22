@@ -27,7 +27,10 @@ app.post('/submit-guest', (req, res) => {
           email: req.body.email,
           howmet: req.body.howmet,
           other: req.body.other,
-          message: req.body.message
+          message: req.body.message,
+          maillist: req.body.maillist,
+          format: req.body.format,
+          dateTime: new Date()
      }
 
      
