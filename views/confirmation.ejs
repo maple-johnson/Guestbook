@@ -21,7 +21,7 @@
 
           <h3>What you added to the Guestbook:</h3>
 
-          <p><b>Name:</b><%= signed[num].fname %> <%= signed[num].lname %></p>
+          <p><b>Name:</b> <%= signed[num].fname %> <%= signed[num].lname %></p>
 
           <% if (!signed[num].jtitle == '') { %> 
                <p><b>Job Title:</b> <%= signed[num].jtitle %></p>
@@ -35,31 +35,33 @@
                <p><b>LinkedIn Page:</b> <%= signed[num].linkedin %></p>
           <% } %>
 
-          <p><b>Email:</b><%= signed[num].email %></p>
+          <p><b>Email:</b> <%= signed[num].email %></p>
 
-          <% if (!signed[num].howmet == 'none') { %>
-               <p><b>How we met:</b><%= signed[num].howmet %></p>
+          <% if (!signed[num].howmet == '') { %>
+               <p><b>How we met:</b> <%= signed[num].howmet %></p>
           <% } %>
 
           <% if (!signed[num].other == '') { %>
-               <p><b>Additional Info:</b><%= signed[num].other %></p>
+               <p><b>Additional Info:</b> <%= signed[num].other %></p>
           <% } %>
           
           <% if (!signed[num].message == '') { %>
-               <p><b>Message:</b><%= signed[num].message %></p>
+               <p><b>Message:</b> <%= signed[num].message %></p>
           <% } %>
 
-          <% if (!signed[num].maillist == undefined) { %>
+          <% if (!signed[num].maillist == '') { %>
                <p><b>Add to Mail List?:</b> Yes</p>
           <% } else { %>
                <p><b>Add to Mail List?:</b> No</p>
           <% } %>
 
-          <% if (!signed[num].format == undefined) { %>
-               <p><b>Email Format:</b><%= signed[num].format %></p>
+          <% if (!signed[num].format == '') { %>
+               <p><b>Email Format:</b> <%= signed[num].format %></p>
           <% } %>
 
           <a id="button" href="/">Return Home</a>
+
+          <a id="button" href="/admin">Guestbook</a>
 
           <footer>
                <a target="_blank" href="https://icons8.com/icon/114325/open-book">Open Book</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
