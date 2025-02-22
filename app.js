@@ -33,15 +33,23 @@ app.post('/submit-guest', (req, res) => {
           dateTime: new Date()
      }
 
-     
-     // Fill in the form data
-     signed.push(guest);
+     // Verify name and email was input
+     if (guest.fname == "" || guest.lname == "" || guest.email == "")
+     {
+          // If not, send error message
+          res.send('Invalid Input: Please submit at least a first name, last name and email.');
+     }
+     else
+     {
+          // Fill in the form data
+          signed.push(guest);
 
-     //Test operations:
-     console.log(signed);
+          //Test operations:
+          console.log(signed);
 
-     // Respond to the user with a confirmation page
-     res.render('confirmation', { signed });
+          // Respond to the user with a confirmation page
+          res.render('confirmation', { signed });
+     }
 
 });
 
