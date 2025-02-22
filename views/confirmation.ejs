@@ -4,13 +4,60 @@
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Confirmation</title>
-          <link rel="stylesheet" href="styles/guests-style.css">
+          <link rel="stylesheet" href="styles/confirmation-style.css">
+
+          <!-- Icon -->
+          <link rel="icon" href="images/icons8-open-book-48.png">
      </head>
      <body>
+
+          <!-- Setting Point in Array to grab -->
+          <% num = signed.length - 1; %>
+
           <head>
                <h1>Submission Confirmed!</h1>
-               <h3>Thank you!</h3>
+               <h3>Thank you <%= signed[num].fname %>!</h3>
           </head>
+
+          <h3>What you added to the Guestbook:</h3>
+
+          <p><b>Name:</b><%= signed[num].fname %> <%= signed[num].lname %></p>
+
+          <% if (!signed[num].jtitle == '') { %> 
+               <p><b>Job Title:</b> <%= signed[num].jtitle %></p>
+          <% } %>
+
+          <% if (!signed[num].company == '') { %>
+               <p><b>Company:</b> <%= signed[num].company %></p>
+          <% } %>
+
+          <% if (!signed[num].linkedin == '') { %>
+               <p><b>LinkedIn Page:</b> <%= signed[num].linkedin %></p>
+          <% } %>
+
+          <p><b>Email:</b><%= signed[num].email %></p>
+
+          <% if (!signed[num].howmet == 'none') { %>
+               <p><b>How we met:</b><%= signed[num].howmet %></p>
+          <% } %>
+
+          <% if (!signed[num].other == '') { %>
+               <p><b>Additional Info:</b><%= signed[num].other %></p>
+          <% } %>
+          
+          <% if (!signed[num].message == '') { %>
+               <p><b>Message:</b><%= signed[num].message %></p>
+          <% } %>
+
+          <% if (!signed[num].maillist == undefined) { %>
+               <p><b>Add to Mail List?:</b> Yes</p>
+          <% } else { %>
+               <p><b>Add to Mail List?:</b> No</p>
+          <% } %>
+
+          <% if (!signed[num].format == undefined) { %>
+               <p><b>Email Format:</b><%= signed[num].format %></p>
+          <% } %>
 
           <a id="button" href="/">Return Home</a>
 

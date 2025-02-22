@@ -41,7 +41,7 @@ app.post('/submit-guest', (req, res) => {
      console.log(signed);
 
      // Respond to the user with a confirmation page
-     res.render('confirmation');
+     res.render('confirmation', { signed });
 
 });
 
