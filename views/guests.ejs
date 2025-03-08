@@ -20,17 +20,17 @@
                <% } %>
 
                <% for (let i = 0; i < signed.length; i++) { %>
-                    <li><b>Name:</b> <%= signed[i].fname %> <%= signed[i].lname %></li>
-                    <li><b>Job:</b> <%= signed[i].jtitle %></li>
+                    <li><b>Name:</b> <%= signed[i].firstName %> <%= signed[i].lastName %></li>
+                    <li><b>Job:</b> <%= signed[i].jobTitle %></li>
                     <li><b>Company</b> <%= signed[i].company %></li>
-                    <li><b>LinkedIn:</b> <%= signed[i].linkedin %></li>
+                    <li><b>LinkedIn:</b> <%= signed[i].linkedIn %></li>
                     <li><b>Email:</b> <%= signed[i].email %></li>
-                    <li><b>How we met:</b> <%= signed[i].howmet %></li>
+                    <li><b>How we met:</b> <%= signed[i].howMet %></li>
                     <li><b>Additional Info:</b> <%= signed[i].other %></li>
                     <li><b>Message:</b> <%= signed[i].message %></li>
-                    <li><b>Mail-List:</b> <%= signed[i].maillist %></li>
+                    <li><b>Mail-List:</b> <%= signed[i].mailList %></li>
                     <li><b>Email Format:</b> <%= signed[i].format %></li>
-                    <li><b>Date Submitted:</b> <%= signed[i].dateTime %></li>
+                    <li><b>Date Submitted:</b> <%= signed[i].dateAdded %></li>
                     <hr>
                <% } %>
           </ul>>

@@ -11,52 +11,49 @@
      </head>
      <body>
 
-          <!-- Setting Point in Array to grab -->
-          <% num = signed.length - 1; %>
-
           <head>
                <h1>Submission Confirmed!</h1>
-               <h3>Thank you <%= signed[num].fname %>!</h3>
+               <h3>Thank you <%= guest.fname %>!</h3>
           </head>
 
           <h3>What you added to the Guestbook:</h3>
 
-          <p><b>Name:</b> <%= signed[num].fname %> <%= signed[num].lname %></p>
+          <p><b>Name:</b> <%= guest.fname %> <%= guest.lname %></p>
 
-          <% if (!signed[num].jtitle == '') { %> 
-               <p><b>Job Title:</b> <%= signed[num].jtitle %></p>
+          <% if (!guest.jtitle == '') { %> 
+               <p><b>Job Title:</b> <%= guest.jtitle %></p>
           <% } %>
 
-          <% if (!signed[num].company == '') { %>
-               <p><b>Company:</b> <%= signed[num].company %></p>
+          <% if (!guest.company == '') { %>
+               <p><b>Company:</b> <%= guest.company %></p>
           <% } %>
 
-          <% if (!signed[num].linkedin == '') { %>
-               <p><b>LinkedIn Page:</b> <%= signed[num].linkedin %></p>
+          <% if (!guest.linkedin == '') { %>
+               <p><b>LinkedIn Page:</b> <%= guest.linkedin %></p>
           <% } %>
 
-          <p><b>Email:</b> <%= signed[num].email %></p>
+          <p><b>Email:</b> <%= guest.email %></p>
 
-          <% if (!signed[num].howmet == '') { %>
-               <p><b>How we met:</b> <%= signed[num].howmet %></p>
+          <% if (!guest.howmet == '') { %>
+               <p><b>How we met:</b> <%= guest.howmet %></p>
           <% } %>
 
-          <% if (!signed[num].other == '') { %>
-               <p><b>Additional Info:</b> <%= signed[num].other %></p>
+          <% if (!guest.other == '') { %>
+               <p><b>Additional Info:</b> <%= guest.other %></p>
           <% } %>
           
-          <% if (!signed[num].message == '') { %>
-               <p><b>Message:</b> <%= signed[num].message %></p>
+          <% if (!guest.message == '') { %>
+               <p><b>Message:</b> <%= guest.message %></p>
           <% } %>
 
-          <% if (!signed[num].maillist == '') { %>
+          <% if (!guest.maillist == '') { %>
                <p><b>Add to Mail List?:</b> Yes</p>
           <% } else { %>
                <p><b>Add to Mail List?:</b> No</p>
           <% } %>
 
-          <% if (!signed[num].format == '') { %>
-               <p><b>Email Format:</b> <%= signed[num].format %></p>
+          <% if (!guest.format == '') { %>
+               <p><b>Email Format:</b> <%= guest.format %></p>
           <% } %>
 
           <a id="button" href="/">Return Home</a>
